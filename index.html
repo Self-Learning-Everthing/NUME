@@ -3,27 +3,60 @@
   <head></head>
   <body>
     <p>
-      BISECTION
+  def f(x):
       <br />
-      while idoshgesid
+    y=x*x-4*x+2
       <br />
-      if alefhesadlflds
-      <br /> 
-      glkfsdjhgweoifjesdzg
+    return y
       <br />
-      dgfdsfdsfg
-      <br />
-      sdeg
-      <br />
-      dgfdsfdsfg
-    </p>
-    <div>
-      sda
-      dsad
-      dasdsa
-      dasdsad
-      dasdsasdsad
-      dasdsadas
-    </div>
+
+a=float( input('Enter the lower interval'))<br />
+b=float( input('Enter the upper interval'))<br />
+e_limit=float( input('enter the acceptence error'))<br />
+n_limit=int( input('enter the  max ineration'))<br />
+print (f'{a}, {f(a)}')<br />
+print (f'{b}, {f(b)}')<br />
+
+while(f(a)*f(b)>0):<br />
+  print('your input is not,valid please insert another one' )<br />
+  a=float( input('Enter the lower interval'))<br />
+  b=float( input('Enter the upper interval'))<br />
+  print (f'{a}, {f(a)}')<br />
+  print (f'{b}, {f(b)}')<br />
+
+print('this input is valid')<br />
+if(f(a)*f(b)==0):<br />
+    
+    print('a==root or b==root')<br />
+    if(f(a)==0):<br />
+       print ('{} is root'.format(a))<br />
+       exit()<br />
+    else:<br />
+       print ('{} is root'.format(b))<br />
+       exit()<br />
+
+    print ('start bisection method')<br />
+    exit()<br />
+    
+n=0<br />
+error=100<br />
+old_root=a<br />
+while(n<n_limit and error>e_limit):<br />
+    n=n+1<br />
+    root=(a+b)/2<br />
+    print('new aporx root',root)<br />
+    print('the function at the new root',f(root))<br />
+    if (root)==0:<br />
+        print('{} is root'.format(root))<br />
+        exit()<br />
+    if(f(a)*f(root)>0):<br />
+            a=root<br />
+            b=b<br />
+    else:<br />
+                b=root<br />
+                a=a<br />
+                error=abs(root-old_root)<br />
+                old_root=root<br />
+print('kos emk sharmo6a root ={},number of interions={},error={}').format(root,n,error)<br />
   </body>
 </html>
