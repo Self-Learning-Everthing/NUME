@@ -9,59 +9,59 @@
   </head>
   <body>
     <p>
-def f(x):< br />
+def f(x):<br />
     y = x * x - 4 * x + 2 < br />
     return y< br />
 
-a = float(input('Enter the lower interval'))< br />
-b = float(input('Enter the upper interval'))< br />
-e_limit = float(input('enter the acceptance error'))< br />
-n_limit = int(input('enter the max iteration'))< br />
+a = float(input('Enter the lower interval'))<br />
+b = float(input('Enter the upper interval'))<br />
+e_limit = float(input('enter the acceptance error'))<br />
+n_limit = int(input('enter the max iteration'))<br />
 
-print(f'{a}, {f(a)}')< br />
-print(f'{b}, {f(b)}')< br />
+print(f'{a}, {f(a)}')<br />
+print(f'{b}, {f(b)}')<br />
 
-while f(a) * f(b) > 0:< br />
-    print('your input is not valid, please insert another one')< br />
-    a = float(input('Enter the lower interval'))< br />
-    b = float(input('Enter the upper interval'))< br />
-    print(f'{a}, {f(a)}')< br />
-    print(f'{b}, {f(b)}')< br />
+while f(a) * f(b) > 0:<br />
+    print('your input is not valid, please insert another one')<br />
+    a = float(input('Enter the lower interval'))<br />
+    b = float(input('Enter the upper interval'))<br />
+    print(f'{a}, {f(a)}')<br />
+    print(f'{b}, {f(b)}')<br />
 
-print('this input is valid')< br />
+print('this input is valid')<br />
 
-if f(a) * f(b) == 0:< br />
-    print('a == root or b == root')< br />
-    if f(a) == 0:< br />
-        print('{} is root'.format(a))< br />
-    else:< br />
-        print('{} is root'.format(b))< br />
-    exit()< br />
+if f(a) * f(b) == 0:<br />
+    print('a == root or b == root')<br />
+    if f(a) == 0:<br />
+        print('{} is root'.format(a))<br />
+    else:<br />
+        print('{} is root'.format(b))<br />
+    exit()<br />
 
-print('start bisection method')< br />
+print('start bisection method')<br />
 
-n = 0< br />
-error = 100< br />
-old_root = a< br />
+n = 0<br />
+error = 100<br />
+old_root = a<br />
 
-while n &#60; n_limit and error > e_limit:< br />
-    n = n + 1< br />
-    root = (a + b) / 2< br />
-    print('new approx root', root)< br />
-    print('the function at the new root', f(root))< br />
+while n &#60; n_limit and error > e_limit:<br />
+    n = n + 1<br />
+    root = (a + b) / 2<br />
+    print('new approx root', root)<br />
+    print('the function at the new root', f(root))<br />
 
-    if f(root) == 0:< br />
-        print('{} is root'.format(root))< br />
-        exit()< br />
+    if f(root) == 0:<br />
+        print('{} is root'.format(root))<br />
+        exit()<br />
 
-    if f(a) * f(root) > 0:< br />
-        a = root< br />
-    else:< br />
-        b = root< br />
+    if f(a) * f(root) > 0:<br />
+        a = root<br />
+    else:<br />
+        b = root<br />
 
-    error = abs(root - old_root)< br />
-    old_root = root< br />
+    error = abs(root - old_root)<br />
+    old_root = root<br />
 
-print('the root is = {}, number of iterations = {}, error = {}'.format(root, n, error))< br />
+print('the root is = {}, number of iterations = {}, error = {}'.format(root, n, error))<br />
   </body>
 </html>
